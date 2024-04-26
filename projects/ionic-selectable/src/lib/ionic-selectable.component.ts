@@ -986,7 +986,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
       return item;
     }
 
-    return this._shouldStoreItemValue ? item[this.itemValueField] : item; //sjd fix
+    return this._shouldStoreItemValue ? item : item[this.itemValueField];
   }
 
   _onSearchbarClear() {
