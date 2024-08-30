@@ -963,7 +963,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
   _formatValueItem(item: any): string {
     if (this._shouldStoreItemValue) {
       // Get item text from the list as we store it's value only.
-      const selectedItem = this.items.find(_item => _item[this.itemValueField] === item);
+      const selectedItem = this.items.find(_item => _item[this.itemValueField] === item[this.itemValueField]);
 
       return this._formatItem(selectedItem);
     } else {
@@ -986,7 +986,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
       return item;
     }
 
-    return this._shouldStoreItemValue ? item : item[this.itemValueField];
+    return this._shouldStoreItemValue ? item[this.itemValueField] : item;
   }
 
   _onSearchbarClear() {
