@@ -1664,7 +1664,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
 
     return new Promise(function(resolve, reject) {
       if (!self._isEnabled || self._isOpened) {
-        reject('IonicSelectable is disabled or already opened.');
+        // reject('IonicSelectable is disabled or already opened.');
         return;
       }
 
