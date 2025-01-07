@@ -980,6 +980,18 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
     }
   }
 
+  // if shouldStoreItemValue is set, then resolve the item to the object and return that
+  // so that value template can use properties.
+  _getSelectedItem() {
+    if (this._shouldStoreItemValue) {
+        let item = this._valueItems[0];
+        const selectedItem = this.items.find(_item => _item[this.itemValueField] === item);
+        return selectedItem;
+    } else{
+        return this._valueItems[0];
+    } 
+  }
+
   _getItemValue(item: any): any {
     if (!this._hasObjects) {
       return item;

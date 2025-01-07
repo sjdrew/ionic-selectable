@@ -10,6 +10,8 @@
 - refactored code into standard projects/ library format.
 - fixed ionic classes to properly show valid/invalid values
 - add valueMode setting to allow setting and getting the value even when supplying array of objects.
+
+Use: "ionic-selectable": "https://github.com/sjdrew/ionic-selectable/raw/ionic7/ionic-selectable-4.10.2.tgz",
   
 # Ionic Selectable v5(alpha) is here
 

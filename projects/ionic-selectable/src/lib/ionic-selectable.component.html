@@ -7,7 +7,7 @@
     <div class="ionic-selectable-value-item"
       *ngIf="valueTemplate && _valueItems.length && !isMultiple">
       <div [ngTemplateOutlet]="valueTemplate"
-        [ngTemplateOutletContext]="{ value: _valueItems[0] }">
+        [ngTemplateOutletContext]="{ value: _getSelectedItem() }">
       </div>
     </div>
     <span *ngIf="!valueTemplate && _valueItems.length">
