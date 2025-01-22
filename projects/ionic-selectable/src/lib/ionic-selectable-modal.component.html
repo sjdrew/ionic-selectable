@@ -25,6 +25,7 @@
     <ion-toolbar *ngIf="selectComponent.canSearch || selectComponent.messageTemplate">
         <ion-searchbar *ngIf="selectComponent.canSearch" #searchbarComponent [(ngModel)]="selectComponent._searchText"
             (ionChange)="selectComponent._filterItems()" (ionClear)="selectComponent._onSearchbarClear()"
+            (ionInput)="selectComponent.searchMode === 'input' ? selectComponent._filterItems() : null"
             [placeholder]="selectComponent.searchPlaceholder" [debounce]="selectComponent.searchDebounce">
         </ion-searchbar>
         <div class="ionic-selectable-message" *ngIf="selectComponent.messageTemplate">

@@ -371,6 +371,16 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
   canSearch = false;
 
   /**
+   * Determines whether search should be done on enter or keypress.
+   * See more on [GitHub](https://github.com/eakoriakin/ionic-selectable/wiki/Documentation#cansearch).
+   *
+   * @default 'input'
+   * @memberof IonicSelectableComponent
+   */
+  @Input()
+  searchMode: 'input' | 'enter' = 'input';
+
+  /**
    * Determines whether `onSearch` event is enabled.
    * See more on [GitHub](https://github.com/eakoriakin/ionic-selectable/wiki/Documentation#isonsearchenabled).
    *
@@ -1005,6 +1015,10 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
     // Ionic Searchbar doesn't clear bind with ngModel value.
     // Do it ourselves.
     this._searchText = '';
+
+    if (this.searchMode === 'input') {
+      this._filterItems();
+    }
   }
 
   _filterItems() {
