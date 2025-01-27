@@ -3,6 +3,13 @@
 [dm-image]: https://img.shields.io/npm/dm/ionic-selectable.svg
 [dt-image]: https://img.shields.io/npm/dt/ionic-selectable.svg
 
+## Version 4.10.5 updates by Doug Kneller
+- grab Steve's _getSelectedItem change for dynamically setting value for a value template, updated with logic from 4.10.4
+
+## Version 4.10.4 updates by Doug Kneller
+- revert shouldStoreItemValue change
+- fix code that was not resulting in selected item showing when shouldStoreItemValue was true
+
 ## Version 4.9.2, udpates by Steve Drew
 - support ionic 6
 - improved keyboard focus/tabbing
@@ -12,7 +19,7 @@
 - add valueMode setting to allow setting and getting the value even when supplying array of objects.
 
 Use: "ionic-selectable": "https://github.com/sjdrew/ionic-selectable/raw/ionic7/ionic-selectable-4.10.2.tgz",
-  
+
 # Ionic Selectable v5(alpha) is here
 
 ## `@ionic-selectable/core` for Vanilla JS
