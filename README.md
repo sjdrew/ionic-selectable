@@ -3,6 +3,10 @@
 [dm-image]: https://img.shields.io/npm/dm/ionic-selectable.svg
 [dt-image]: https://img.shields.io/npm/dt/ionic-selectable.svg
 
+
+## Version 4.11.4 update by Steve Drew
+- change item-has-focus to ion-focused to support ionic 7+
+
 ## Version 4.11.3 updates by Doug Kneller
 - same changes as 4.10.5 but for Ionic8 branch 
 
