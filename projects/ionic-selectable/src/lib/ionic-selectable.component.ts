@@ -1363,7 +1363,7 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
     }
 
     // Apply focus CSS class for proper stylying of ion-item/ion-label.
-    this._setIonItemCssClass('item-has-focus', hasFocus);
+    this._setIonItemCssClass('ion-focused', hasFocus);
   }
 
   private _setIonItemHasValue() {
@@ -1485,11 +1485,11 @@ export class IonicSelectableComponent implements ControlValueAccessor, OnInit, D
 
 
   onButtonFocus() {
-    this._setIonItemCssClass('item-has-focus', true);
+    this._setIonItemCssClass('ion-focused', true);
   }
 
   onButtonBlur() {
-    this._setIonItemCssClass('item-has-focus', false);
+    this._setIonItemCssClass('ion-focused', false);
   }
 
   /* ControlValueAccessor */
